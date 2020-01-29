@@ -1,6 +1,5 @@
 import sympy.polys.partfrac
 from sympy.integrals.transforms import inverse_laplace_transform
-from sympy.abc import s,t
 from sympy.plotting import plot, plot3d
 
 """ Function to return the partial fraction decomposition
@@ -30,5 +29,5 @@ def invLaplace(f=(3*s + 2)/(s**2 -(3*s) +2)):
     return plot_graph(f,ans)
 
 Eq = input("Enter a Equation:")
-t = sympy.symbols('t',positive=True)
+s,t = sympy.symbols('s t',positive=True)
 invLaplace(eval(Eq))
